@@ -14,9 +14,9 @@ const Books = () => {
     }, [])
 
     return (
-        <div className="py-5">
-            <h2 className="text-center text-4xl font-bold ">Books {books.length}</h2>
-            <div>
+        <div className="py-5 flex flex-col justify-center items-center">
+            <h2 className="text-center text-4xl font-bold py-7">Books {books.length}</h2>
+            <div className="grid grid-cols-3 gap-52">
                 {
                     books.map(book => <Book key={book.bookId} book ={book} ></Book>)
                 }
